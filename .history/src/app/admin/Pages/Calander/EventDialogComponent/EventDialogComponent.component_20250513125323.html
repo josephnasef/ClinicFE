@@ -1,0 +1,45 @@
+<div mat-dialog-title class="dialog-header">
+  <!-- <mat-icon color="primary" class="dialog-icon">event</mat-icon> -->
+  <span class="dialog-title"> Appointment Details</span>
+</div>
+
+<mat-divider></mat-divider>
+
+<div mat-dialog-content class="dialog-content">
+  <mat-card class="event-card">
+    <mat-card-header class="event-card-header">
+      <mat-card-title class="event-title">{{ data.event.title }}</mat-card-title>
+      <mat-card-subtitle class="event-time-details">
+       
+      </mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content class="event-content">
+       <strong>Start:</strong> {{ data.event.start | date: 'fullDate' }}
+        <span class="event-time">{{ data.event.start | date: 'shortTime' }}</span>
+        <br>
+        <strong>End:</strong> {{ data.event.end | date: 'fullDate' }}
+        <span class="event-time">{{ data.event.end | date: 'shortTime' }}</span>
+      <div *ngIf="data.event.start && data.event.end" class="event-duration">
+        <strong>Duration:</strong>
+        <!-- Optionally calculate and display event duration here -->
+        {{ (calculateDuration(data.event.start, data.event.end) | number: '1.0-0') }} minutes
+
+      </div>
+
+      <div class="event-notes">
+        <strong>Notes:</strong>
+        <span *ngIf="data.event.meta?.notes; else noNotes">
+          {{ data.event.meta.notes }}
+        </span>
+        <ng-template #noNotes>No notes provided.</ng-template>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<mat-divider></mat-divider>
+
+<div mat-dialog-actions align="end" class="dialog-actions">
+  <button mat-stroked-button color="primary" (click)="close()">Close</button>
+</div>

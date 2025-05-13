@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+node_modules
+/node_modules
+.angular
+/.angular/cache/13.2.4
+/dist/DoctorBooking
+/.angular/cache/14.2.10
+dist

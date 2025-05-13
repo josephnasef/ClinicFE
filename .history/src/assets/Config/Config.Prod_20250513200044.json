@@ -1,0 +1,13 @@
+{
+  "env": {
+    "name": "Prod",
+    "isProduction": true,
+    "isLocal": false
+  },
+  "apiServerEndPoints": {
+    "secretkey": "hWmZq3t6w9z$C&F)",
+    "DoctorBooking": "http://msclinic.runasp.net/api/",
+    "UserprofileAPI": "http://msclinic.runasp.net/api/",
+    "AuthAPIPass": "db3OIsj_BXE9NZDy0t8W3Tc"
+  }
+}

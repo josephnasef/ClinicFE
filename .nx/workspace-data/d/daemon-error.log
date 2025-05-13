@@ -1,0 +1,26 @@
+Daemon process terminated and closed the connection
+
+Messages from the log:
+    at listenInCluster (node:net:1994:12)
+    at Server.listen (node:net:2116:5)
+    at e:\Bt\My Company\my work\My owen\FrontEnd Angular\DoctorMangementProjectFE\node_modules\nx\src\daemon\server\server.js:353:20
+    at new Promise (<anonymous>)
+    at startServer (e:\Bt\My Company\my work\My owen\FrontEnd Angular\DoctorMangementProjectFE\node_modules\nx\src\daemon\server\server.js:351:12)
+    at async e:\Bt\My Company\my work\My owen\FrontEnd Angular\DoctorMangementProjectFE\node_modules\nx\src\daemon\server\start.js:8:9
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1973:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '\\\\.\\pipe\\nx\\C:\\Users\\Nabil\\AppData\\Local\\Temp\\41c00333afe3ab1fb053\\d.sock',
+  port: -1
+}
+
+Node.js v22.13.0
+[NX Daemon Server] - 2025-01-19T11:08:31.246Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2025-01-19T11:08:31.247Z - [WATCHER]: Stopping the watcher for e:\Bt\My Company\my work\My owen\FrontEnd Angular\DoctorMangementProjectFE (sources)
+
+
+
+More information: e:\Bt\My Company\my work\My owen\FrontEnd Angular\DoctorMangementProjectFE\.nx\workspace-data\d\daemon.log

@@ -1,0 +1,98 @@
+<div class="card">
+  <p-toolbar styleClass="p-mb-4">
+    <ng-template pTemplate="left">
+      <button pButton pRipple label="New Shift" *ngIf="filteredItems(AppConstants.API_ENDPOINTS.ShiftCreateShift)"
+        icon="pi pi-plus" class="p-button-success mr-2 p-mr-2" (click)="openNewShift()"></button>
+      <button *ngIf="filteredItems(AppConstants.API_ENDPOINTS.BookingAppointment)" pButton pRipple
+        label="New Appointment" icon="pi pi-plus" class="p-button-success p-mr-2"
+        (click)="openNewAppointment()"></button>
+    </ng-template>
+
+    <!-- <ng-template pTemplate="right">
+            <p-fileUpload mode="basic" accept="image/*" [maxFileSize]="1000000" label="Import" chooseLabel="Import" class="p-mr-2 p-d-inline-block"></p-fileUpload>
+            <button pButton pRipple label="Export" icon="pi pi-upload" class="p-button-help"></button>
+        </ng-template> -->
+  </p-toolbar>
+
+  <p-table *ngIf="filteredItems(AppConstants.API_ENDPOINTS.BookingHistory)" #dt [value]="BookingAppointments || []"
+    [rows]="4" [paginator]="true" [globalFilterFields]="[
+      'appointmentDate',
+      'employee.FirstNameEn',
+      'from',
+      'to',
+      'state'
+    ]" [rowHover]="true" dataKey="id" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+    [showCurrentPageReport]="true">
+
+    <ng-template pTemplate="header">
+      <tr>
+        <!-- <th style="width: 3rem">
+          <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+        </th> -->
+        <th pSortableColumn="appointmentDate">
+          appointment Date <p-sortIcon field="appointmentDate"></p-sortIcon>
+        </th>
+        <th pSortableColumn="FirstNameEn">
+          First NameEn <p-sortIcon field="FirstNameEn"></p-sortIcon>
+        </th>
+        <th pSortableColumn="From">
+          From <p-sortIcon field="From"></p-sortIcon>
+        </th>
+        <th pSortableColumn="To">To <p-sortIcon field="To"></p-sortIcon>
+        </th>
+        <th pSortableColumn="State">
+          State <p-sortIcon field="State"></p-sortIcon>
+        </th>
+        <th>Action <p-sortIcon field="Action"></p-sortIcon>
+        </th>
+        <th></th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-BookingAppointmentItem>
+      <tr>
+        <!-- <td>
+          <p-tableCheckbox [value]="BookingAppointments"></p-tableCheckbox>
+        </td> -->
+        <td>{{ BookingAppointmentItem.appointmentDate | date }}</td>
+        <td>{{ BookingAppointmentItem.employee?.firstNameEn }} {{ BookingAppointmentItem.employee?.lastNameEn }} - {{
+          BookingAppointmentItem.employee?.userName }}</td>
+        <td>{{ BookingAppointmentItem.from }}</td>
+        <td>{{ BookingAppointmentItem.to }}</td>
+        <td *ngIf="bookingState.Pending == BookingAppointmentItem.state" class="text-warning">
+          Pending
+        </td>
+        <td *ngIf="bookingState.Canceled == BookingAppointmentItem.state" class="text-danger">
+          Canceled
+        </td>
+        <td *ngIf="bookingState.Confirmed == BookingAppointmentItem.state" class="text-success">
+          Confirmed
+        </td>
+        <td *ngIf="bookingState.Completed == BookingAppointmentItem.state" class="text-info">
+          Completed
+        </td>
+        <td class="menu-container">
+          <button mat-button [matMenuTriggerFor]="menu" class="p-button p-button-rounded p-button-primary">
+            Actions
+          </button>
+          <mat-menu #menu="matMenu" class="custom-menu">
+            <button mat-menu-item
+              *ngIf="filteredItems(AppConstants.API_ENDPOINTS.ApproveAnAppointment) ||filteredItems(AppConstants.API_ENDPOINTS.CancelBooking)"
+              (click)="openbookingStateDialog(BookingAppointmentItem.id)" class="p-menuitem-link">
+              <i class="pi pi-pencil"></i> Change Status
+            </button>
+          </mat-menu>
+        </td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+      <div class="p-d-flex p-ai-center p-jc-between">
+        In total there are {{ BookingAppointments ? BookingAppointments.length : 0 }} BookingAppointments.
+      </div>
+    </ng-template>
+  </p-table>
+</div>
+
+<app-bookingStateDialog (updateEvent)="ngOnInit()"></app-bookingStateDialog>
+<app-ShiftDialog></app-ShiftDialog>
+<app-AppointmentDialog (updateEvent)="ngOnInit()"></app-AppointmentDialog>
+<p-confirmDialog [style]="{ width: '450px' }"></p-confirmDialog>

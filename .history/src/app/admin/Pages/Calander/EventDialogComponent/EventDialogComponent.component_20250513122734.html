@@ -1,0 +1,55 @@
+<div mat-dialog-title class="dialog-header">
+  <mat-icon color="primary" class="dialog-icon">event</mat-icon>
+  <span class="dialog-title">{{ data.action }} Event</span>
+</div>
+
+<mat-divider></mat-divider>
+
+<div mat-dialog-content class="dialog-content">
+
+  <mat-card class="event-card">
+    <mat-card-header>
+      <div mat-card-avatar>
+        <mat-icon color="accent">event_note</mat-icon>
+      </div>
+      <mat-card-title>{{ data.event.title }}</mat-card-title>
+      <mat-card-subtitle>
+        <div class="datetime-info">
+          <mat-icon class="icon">schedule</mat-icon>
+          <span><strong>Start:</strong> {{ data.event.start | date: 'fullDate' }} - {{ data.event.start | date: 'shortTime' }}</span>
+        </div>
+        <div class="datetime-info">
+          <mat-icon class="icon">schedule</mat-icon>
+          <span><strong>End:</strong> {{ data.event.end | date: 'fullDate' }} - {{ data.event.end | date: 'shortTime' }}</span>
+        </div>
+      </mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div *ngIf="data.event.start && data.event.end" class="info-section">
+        <mat-chip color="primary" selected>
+          Duration:
+          {{ ((data.event.end | date:'T') | date:'HH:mm') }}
+        </mat-chip>
+      </div>
+
+      <div class="info-section">
+        <strong>Notes:</strong>
+        <div *ngIf="data.event.meta?.notes; else noNotes" class="note-text">
+          {{ data.event.meta.notes }}
+        </div>
+        <ng-template #noNotes>
+          <span class="note-text">No notes provided.</span>
+        </ng-template>
+      </div>
+
+     
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<mat-divider></mat-divider>
+
+<div mat-dialog-actions align="end" class="dialog-actions">
+  <button mat-stroked-button color="primary" (click)="close()">Close</button>
+</div>

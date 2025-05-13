@@ -1,0 +1,4 @@
+ng serve --configuration=development
+ng serve --configuration=staging
+ng serve --configuration=test
+ng serve --configuration=production

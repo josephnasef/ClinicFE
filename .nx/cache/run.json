@@ -1,0 +1,21 @@
+{
+  "run": {
+    "command": "nx serve",
+    "startTime": "2025-01-19T13:54:55.453Z",
+    "endTime": "2025-01-19T13:55:09.905Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "DoctorBooking:serve:development",
+      "target": "serve",
+      "projectName": "DoctorBooking",
+      "hash": "5069986811699760219",
+      "startTime": "2025-01-19T13:54:55.465Z",
+      "endTime": "2025-01-19T13:55:09.905Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 1
+    }
+  ]
+}

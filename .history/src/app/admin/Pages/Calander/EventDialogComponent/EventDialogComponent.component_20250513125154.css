@@ -1,0 +1,101 @@
+.dialog-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.dialog-icon {
+  margin-right: 10px;
+}
+
+.dialog-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.event-card-header {
+  background-color: #f5f5f5;
+  padding: 10px;
+}
+
+.event-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.event-time-details {
+  font-size: 14px;
+  color: #555;
+}
+
+.event-content {
+  padding: 15px;
+}
+
+.event-duration,
+.event-notes {
+  margin-bottom: 10px;
+}
+
+.event-notes {
+  font-size: 14px;
+  color: #777;
+}
+
+.dialog-actions {
+  padding: 10px;
+  text-align: right;
+}
+
+button {
+  font-size: 14px;
+}
+
+
+.event-title {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.first-line, .second-line {
+  text-align: center;
+  display: block;
+}
+.event-title {
+  text-align: center;
+  width: 100%;
+}
+
+.title-line {
+  display: block;
+  text-align: center;
+}
+/* Center the entire card title */
+.event-title {
+  text-align: center; /* Centers the title */
+  width: 100%;
+}
+
+/* For the first line */
+.title-line:first-child {
+  font-weight: normal;
+}
+
+/* For the second line with Employee Name */
+.title-line:last-child {
+  font-weight: bold; /* Optionally make 'Employee Name' bold */
+  text-align: center; /* Center align the second line */
+  display: inline-block; /* Makes sure it does not break the text */
+  margin-top: 5px; /* Adds a little space between lines */
+}
+
+/* Style the card subtitle */
+.mat-mdc-card-subtitle {
+  text-align: center; /* Centers the subtitle */
+  font-size: 14px;
+  color: #757575; /* Light grey color for the subtitle */
+}

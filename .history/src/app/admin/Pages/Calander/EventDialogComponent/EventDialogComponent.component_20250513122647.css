@@ -1,0 +1,68 @@
+.dialog-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.dialog-icon {
+    font-size: 36px;
+}
+
+.dialog-content {
+    padding: 16px 0;
+}
+
+.event-card {
+    margin: 16px 0;
+}
+
+.dialog-actions {
+    padding: 8px 0;
+}
+
+.dialog-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.3rem;
+}
+
+.dialog-title {
+  font-weight: 600;
+}
+
+.dialog-content {
+  padding-top: 10px;
+}
+
+.event-card {
+  width: 100%;
+}
+
+.datetime-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 4px 0;
+}
+
+.icon {
+  font-size: 18px;
+  color: #555;
+}
+
+.info-section {
+  margin-top: 15px;
+}
+
+.note-text {
+  margin-top: 4px;
+  display: block;
+  color: #444;
+}
+
+.dialog-actions {
+  margin-top: 10px;
+}

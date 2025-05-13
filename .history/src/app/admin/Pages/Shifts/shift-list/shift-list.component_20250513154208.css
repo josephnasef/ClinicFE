@@ -1,0 +1,116 @@
+/* ---------Table  and  component style------------ */
+:host ::ng-deep .p-datatable .p-datatable-thead > tr > th {
+  text-align: center !important;
+}
+:host ::ng-deep .p-datatable .p-datatable-tbody > tr > td {
+  text-align: center !important;
+}
+:host ::ng-deep .menu-container {
+  width: -webkit-fill-available;
+}
+
+.TableWidth {
+  width: 100% !important;
+}
+.p-button-success {
+  background-color: var(--blue);
+}
+
+.p-button-success:hover {
+  background-color: var(--blue2) !important;
+}
+
+.dropdown-menu {
+  display: block;
+}
+
+.custom-mat-select {
+  z-index: 11111 !important;
+}
+
+.mat-select-panel {
+  z-index: 11111 !important;
+}
+
+.p-dialog-mask.p-component-overlay {
+  z-index: 999 !important;
+}
+
+.p-dialog-mask.p-component-overlay {
+  z-index: 999 !important;
+}
+
+.p-dialog {
+  z-index: 999 !important;
+}
+
+.p-dialog-mask {
+  z-index: 999 !important;
+}
+
+.menu-container {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+}
+
+.menu-container:hover .custom-menu {
+  display: block;
+}
+
+.p-button.p-button-rounded.p-button-primary {
+  background-color: #007ad9;
+  color: #ffffff !important;
+  border: none;
+}
+
+.mat-menu-item {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+}
+
+.p-menuitem-link {
+  color: #007ad9;
+  font-weight: bold;
+}
+
+.mat-menu-item:hover {
+  background-color: #e0f0ff;
+}
+
+.mat-menu-item i {
+  margin-right: 8px;
+}
+
+.p-button.p-button-rounded {
+  border-radius: 4px;
+}
+
+/* ---------fliter style------------ */
+.custom-calendar {
+  width: 300px;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+button.p-button {
+  width: 100px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}

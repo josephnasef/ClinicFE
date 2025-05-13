@@ -1,0 +1,17 @@
+.cut-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 160px;
+  height: 1.2em;
+  white-space: nowrap;
+}
+.main-sidebar{
+  position: fixed !important;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+.rotate-down {
+  transform: rotate(90deg);
+}

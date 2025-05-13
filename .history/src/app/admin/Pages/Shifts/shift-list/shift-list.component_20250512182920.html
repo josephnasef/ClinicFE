@@ -1,0 +1,51 @@
+<div class="card">
+  <p-toolbar styleClass="p-mb-4">
+    <ng-template pTemplate="left">
+      <button pButton pRipple label="Add new Service" icon="pi pi-plus" class="p-button-success mr-2 p-mr-2"
+        *ngIf="filteredItems(AppConstants.API_ENDPOINTS.ServicesCreate)" (click)="openNew()"></button>
+      <!-- <button pButton pRipple label="New Shift" icon="pi pi-plus" class="p-button-success mr-2 p-mr-2"
+        (click)="openNewShift()"
+        ></button> -->
+    </ng-template>
+
+    <!-- <ng-template pTemplate="right">
+            <p-fileUpload mode="basic" accept="image/*" [maxFileSize]="1000000" label="Import" chooseLabel="Import" class="p-mr-2 p-d-inline-block"></p-fileUpload>
+            <button pButton pRipple label="Export" icon="pi pi-upload" class="p-button-help"></button>
+        </ng-template> -->
+  </p-toolbar>
+  <div class="card" *ngIf="paginatedShifts">
+<p-table [value]="paginatedShifts" [paginator]="true" [rows]="rows" [totalRecords]="totalRecords"
+  (onLazyLoad)="loadShifts($event)" [lazy]="true">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>From</th>
+      <th>To</th>
+      <th>Day Date</th>
+      <th>Appoint Count</th>
+      <th>Actions</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-shift>
+    <!-- {{shift|json}} -->
+    <tr>
+      <!-- <td>{{ shift.id }}</td> -->
+      <td>{{ shift.from }}</td>
+      <td>{{ shift.to }}</td>
+      <td>{{ shift.dayDate | date:'d MMMM yyyy'}}</td>
+      <td>{{ shift.appointmentNumber}}</td>
+      <td class="menu-container">
+        <button mat-button [matMenuTriggerFor]="menu" class="p-button p-button-rounded p-button-primary">
+          Actions
+        </button>
+        <mat-menu #menu="matMenu" class="custom-menu">
+          <button mat-menu-item class="p-menuitem-link" (click)="openShiftDetails(shift.id)">
+            <i class="pi pi-pencil"></i> Details
+          </button>
+        </mat-menu>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+  </div>
+</div>
+<app-ServiceDialog (updateEvent)="ngOnInit()"></app-ServiceDialog>

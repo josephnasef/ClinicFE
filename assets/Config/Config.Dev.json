@@ -1,0 +1,13 @@
+{
+  "env": {
+    "name": "DEV",
+    "isProduction": false,
+    "isLocal": true
+  },
+  "apiServerEndPoints": {
+    "secretkey": "hWmZq3t6w9z$C&F)",
+    "DoctorBooking": "https://localhost:7190/api/",
+    "UserprofileAPI": "https://localhost:7190/api/",
+    "AuthAPIPass": "db3OIsj_BXE9NZDy0t8W3Tc"
+  }
+}

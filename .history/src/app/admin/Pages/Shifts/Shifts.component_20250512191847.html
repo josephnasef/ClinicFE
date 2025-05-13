@@ -1,0 +1,22 @@
+<div class="card">
+  <p-toolbar styleClass="employee-shifts-container">
+    <ng-template pTemplate="left">
+     <button pButton pRipple label="New Shift" *ngIf="filteredItems(AppConstants.API_ENDPOINTS.ShiftCreateShift)"
+        icon="pi pi-plus" class="p-button-success mr-2 p-mr-2" (click)="openNewShift()"></button>
+    </ng-template>
+   
+  </p-toolbar>
+ <div class="employee-shifts-container">
+
+      <h2>Employee Shifts</h2>
+
+      <p-panelMenu [model]="EmployeeShiftListForPr"></p-panelMenu>
+      <br>
+
+      <div *ngIf="selectedEmployee" [@panelAnimation]>
+        <app-shift-list [shifts]="selectedEmployee.shifts"></app-shift-list>
+      </div>
+    </div>
+</div>
+
+<app-ShiftDialog></app-ShiftDialog>

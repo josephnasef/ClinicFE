@@ -1,0 +1,125 @@
+/* ---------Table  and  component style------------ */
+
+.p-button-success {
+  background-color: var(--blue);
+}
+
+.p-button-success:hover {
+  background-color: var(--blue2) !important;
+}
+
+.dropdown-menu {
+  display: block;
+}
+
+.custom-mat-select {
+  z-index: 11111 !important;
+  /* Adjust the value as needed */
+}
+
+.mat-select-panel {
+  z-index: 11111 !important;
+  /* Adjust the value as needed */
+
+}
+
+.p-dialog-mask.p-component-overlay {
+  z-index: 999 !important;
+  /* Adjust the value as needed */
+
+}
+
+.p-dialog-mask.p-component-overlay {
+  z-index: 999 !important;
+  /* Adjust the value as needed */
+
+}
+
+.p-dialog {
+  z-index: 999 !important;
+  /* Ensure it's higher than other content */
+}
+
+.p-dialog-mask {
+  z-index: 999 !important;
+  /* Ensure it's higher than other content */
+}
+
+
+/* Container to manage hover state */
+.menu-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Custom menu styles */
+.custom-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  /* Ensure menu is on top */
+}
+
+/* Display menu on hover */
+.menu-container:hover .custom-menu {
+  display: block;
+}
+
+/* Custom styles for the button */
+.p-button.p-button-rounded.p-button-primary {
+  background-color: #007ad9;
+  /* PrimeNG blue color */
+  color: #ffffff !important;
+  border: none;
+}
+
+/* Custom styles for menu items */
+.mat-menu-item {
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+}
+
+/* Custom styles for menu item links */
+.p-menuitem-link {
+  color: #007ad9;
+  /* PrimeNG blue color */
+  font-weight: bold;
+}
+
+/* Hover effect for menu items */
+.mat-menu-item:hover {
+  background-color: #e0f0ff;
+  /* Light blue background on hover */
+}
+
+.mat-menu-item i {
+  margin-right: 8px;
+}
+
+.p-button.p-button-rounded {
+  border-radius: 4px;
+}
+
+/* ---------fliter style------------ */
+.custom-calendar {
+  width: 300px;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+button.p-button {
+  width: 100px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}

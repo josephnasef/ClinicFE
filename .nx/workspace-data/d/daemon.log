@@ -1,0 +1,73 @@
+[NX Daemon Server] - 2025-01-19T11:08:22.348Z - Started listening on: \\.\pipe\nx\C:\Users\Nabil\AppData\Local\Temp\41c00333afe3ab1fb053\d.sock
+[NX Daemon Server] - 2025-01-19T11:08:22.357Z - [WATCHER]: Subscribed to changes within: e:\Bt\My Company\my work\My owen\FrontEnd Angular\DoctorMangementProjectFE (native)
+[NX Daemon Server] - 2025-01-19T11:08:22.370Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-01-19T11:08:22.374Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2025-01-19T11:08:22.434Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-01-19T11:08:22.434Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2025-01-19T11:08:22.435Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-01-19T11:08:22.718Z - Time taken for 'loadSpecifiedNxPlugins' 34.54970000000003ms
+[NX Daemon Server] - 2025-01-19T11:08:26.457Z - Time taken for 'Load Nx Plugin: e:\Bt\My Company\my work\My owen\FrontEnd Angular\DoctorMangementProjectFE\node_modules\nx\src\plugins\package-json' 3970.5652999999993ms
+[NX Daemon Server] - 2025-01-19T11:08:26.561Z - Time taken for 'Load Nx Plugin: e:\Bt\My Company\my work\My owen\FrontEnd Angular\DoctorMangementProjectFE\node_modules\nx\src\plugins\project-json\build-nodes\project-json' 4064.3565999999996ms
+[NX Daemon Server] - 2025-01-19T11:08:26.801Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-01-19T11:08:26.801Z - [REQUEST]: 
+[NX Daemon Server] - 2025-01-19T11:08:26.801Z - [REQUEST]: 
+[NX Daemon Server] - 2025-01-19T11:08:26.828Z - Time taken for 'loadDefaultNxPlugins' 4315.8892ms
+[NX Daemon Server] - 2025-01-19T11:08:26.981Z - Time taken for 'build-project-configs' 55.816100000000006ms
+[NX Daemon Server] - 2025-01-19T11:08:28.308Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2025-01-19T11:08:28.309Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-01-19T11:08:28.363Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2025-01-19T11:08:28.996Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-01-19T11:08:28.996Z - [REQUEST]: 
+[NX Daemon Server] - 2025-01-19T11:08:28.997Z - [REQUEST]: 
+[NX Daemon Server] - 2025-01-19T11:08:29.016Z - Time taken for 'hash changed files from watcher' 632.3236999999999ms
+node:events:502
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use \\.\pipe\nx\C:\Users\Nabil\AppData\Local\Temp\41c00333afe3ab1fb053\d.sock
+    at Server.setupListenHandle [as _listen2] (node:net:1915:21)
+    at listenInCluster (node:net:1994:12)
+    at Server.listen (node:net:2116:5)
+    at e:\Bt\My Company\my work\My owen\FrontEnd Angular\DoctorMangementProjectFE\node_modules\nx\src\daemon\server\server.js:353:20
+    at new Promise (<anonymous>)
+    at startServer (e:\Bt\My Company\my work\My owen\FrontEnd Angular\DoctorMangementProjectFE\node_modules\nx\src\daemon\server\server.js:351:12)
+    at async e:\Bt\My Company\my work\My owen\FrontEnd Angular\DoctorMangementProjectFE\node_modules\nx\src\daemon\server\start.js:8:9
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1973:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '\\\\.\\pipe\\nx\\C:\\Users\\Nabil\\AppData\\Local\\Temp\\41c00333afe3ab1fb053\\d.sock',
+  port: -1
+}
+
+Node.js v22.13.0
+[NX Daemon Server] - 2025-01-19T11:08:31.246Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2025-01-19T11:08:31.247Z - [WATCHER]: Stopping the watcher for e:\Bt\My Company\my work\My owen\FrontEnd Angular\DoctorMangementProjectFE (sources)
+[NX Daemon Server] - 2025-01-19T11:08:34.576Z - Started listening on: \\.\pipe\nx\C:\Users\Nabil\AppData\Local\Temp\41c00333afe3ab1fb053\d.sock
+[NX Daemon Server] - 2025-01-19T11:08:34.590Z - [WATCHER]: Subscribed to changes within: e:\Bt\My Company\my work\My owen\FrontEnd Angular\DoctorMangementProjectFE (native)
+[NX Daemon Server] - 2025-01-19T11:08:34.599Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-01-19T11:08:34.600Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2025-01-19T11:08:34.602Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-01-19T11:08:34.626Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2025-01-19T11:08:34.744Z - Time taken for 'loadSpecifiedNxPlugins' 39.6235999999999ms
+[NX Daemon Server] - 2025-01-19T11:08:38.816Z - Time taken for 'Load Nx Plugin: e:\Bt\My Company\my work\My owen\FrontEnd Angular\DoctorMangementProjectFE\node_modules\nx\src\plugins\js' 4177.8760999999995ms
+[NX Daemon Server] - 2025-01-19T11:08:38.995Z - Time taken for 'Load Nx Plugin: e:\Bt\My Company\my work\My owen\FrontEnd Angular\DoctorMangementProjectFE\node_modules\nx\src\plugins\package-json' 4339.2397ms
+[NX Daemon Server] - 2025-01-19T11:08:39.051Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-01-19T11:08:39.051Z - [REQUEST]: 
+[NX Daemon Server] - 2025-01-19T11:08:39.051Z - [REQUEST]: 
+[NX Daemon Server] - 2025-01-19T11:08:39.074Z - Time taken for 'loadDefaultNxPlugins' 4398.7562ms
+[NX Daemon Server] - 2025-01-19T11:08:39.230Z - Time taken for 'build-project-configs' 42.69030000000021ms
+[NX Daemon Server] - 2025-01-19T11:08:51.403Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-01-19T11:08:51.404Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2025-01-19T11:08:51.406Z - Time taken for 'total for creating and serializing project graph' 16778.2314ms
+[NX Daemon Server] - 2025-01-19T11:08:51.407Z - Done responding to the client project-graph
+[NX Daemon Server] - 2025-01-19T11:08:51.407Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 16779. Response time: 3.
+[NX Daemon Server] - 2025-01-19T11:08:51.421Z - [REQUEST]: Responding to the client. handleGlob
+[NX Daemon Server] - 2025-01-19T11:08:51.421Z - Done responding to the client handleGlob
+[NX Daemon Server] - 2025-01-19T11:08:51.421Z - Handled GLOB. Handling time: 8. Response time: 0.
+[NX Daemon Server] - 2025-01-19T11:08:51.455Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX Daemon Server] - 2025-01-19T11:08:51.459Z - Done responding to the client handleContextFileData
+[NX Daemon Server] - 2025-01-19T11:08:51.459Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 23. Response time: 4.
+[NX Daemon Server] - 2025-01-19T11:08:51.495Z - Closed a connection. Number of open connections: 0

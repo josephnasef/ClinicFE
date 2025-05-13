@@ -1,0 +1,23 @@
+.dialog-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.dialog-icon {
+    font-size: 36px;
+}
+
+.dialog-content {
+    padding: 16px 0;
+}
+
+.event-card {
+    margin: 16px 0;
+}
+
+.dialog-actions {
+    padding: 8px 0;
+}
